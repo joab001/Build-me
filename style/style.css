@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+
+    --bg: #2e0239;
+    --bgInput: #AF5D9C;
+    --textColor: #DDDADA;
+    --bgButton: #AF88B8;
+
+}
+
+body {
+    background-color: var(--bg);
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+form {
+
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 70px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.column {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.column-wrapper {
+
+    display: flex;
+    gap: 20px;
+
+}
+
+label {
+
+    padding-bottom: 2px;
+    display: none;
+
+}
+
+input {
+
+    border: none;
+    background-color: var(--bgInput);
+    color: var(--textColor);
+
+    height: 35px;
+    width: 220px;
+
+    padding-left: 15px;
+    border-radius: 25px;
+}
+
+input::placeholder {
+    color: var(--textColor);
+    padding: 5px 0 5px 5px;
+}
+
+input:focus {
+    outline: 0;
+}
+
+button {
+
+    padding: 5px 15px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+    background-color: var(--bgButton);
+    color: var(--bg);
+
+}
+
+button:hover {
+
+    cursor: pointer;
+
+}
+
+.nuvem {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: -3;
+}
+
+h2 {
+    color: var(--textColor);
+    font-size: 35px;
+}
+
+.estrelas-1 {
+    position: absolute;
+    top: 5%;
+    left: 7%;
+}
+
+.estrelas-2 {
+    position: absolute;
+    top: 65%;
+    left: 70%;
+    height: 25%;
+}
+
+.estrelas-3 {
+
+    position: absolute;
+    top: 5%;
+    left: 73%;
+    height: 25%;
+    transform: rotate(90deg);
+
+}
+
+
+@media (max-width: 890px) {
+    .estrelas-1 {
+        left: 0;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .column-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
