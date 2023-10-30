@@ -151,11 +151,15 @@ h2 {
 
 @media (max-width: 890px) {
     .star-1 {
-        left: 0;
+        display: none;
     }
 }
 
 @media (max-width: 750px) {
+
+    form{
+        margin-top: 70px;
+    }
 
     .column-wrapper {
         flex-direction: column;
