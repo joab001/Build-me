@@ -40,7 +40,7 @@ form {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
 
 }
 
@@ -113,7 +113,7 @@ button:hover {
 
 }
 
-.nuvem {
+.cloud {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -125,20 +125,20 @@ h2 {
     font-size: 35px;
 }
 
-.estrelas-1 {
+.star-1 {
     position: absolute;
     top: 5%;
     left: 7%;
 }
 
-.estrelas-2 {
+.star-2 {
     position: absolute;
     top: 65%;
     left: 70%;
     height: 25%;
 }
 
-.estrelas-3 {
+.star-3 {
 
     position: absolute;
     top: 5%;
@@ -150,7 +150,7 @@ h2 {
 
 
 @media (max-width: 890px) {
-    .estrelas-1 {
+    .star-1 {
         left: 0;
     }
 }
