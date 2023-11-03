@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 * {
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
     font-family: 'Poppins', sans-serif;
+
 }
 
 :root {
@@ -15,9 +20,12 @@
     --textColor: #DDDADA;
     --bgButton: #AF88B8;
 
+    font-size: 62.5%;
+
 }
 
 body {
+
     background-color: var(--bg);
 
     width: 100vw;
@@ -27,6 +35,13 @@ body {
     align-items: center;
     justify-content: center;
 
+}
+
+h2 {
+
+    color: var(--textColor);
+    font-size: 3.5rem;
+    opacity: 0.9;
 
 }
 
@@ -85,15 +100,20 @@ input {
 
     padding-left: 15px;
     border-radius: 25px;
+
 }
 
 input::placeholder {
+
     color: var(--textColor);
     padding: 5px 0 5px 5px;
+
 }
 
 input:focus {
+
     outline: 0;
+
 }
 
 button {
@@ -114,28 +134,30 @@ button:hover {
 }
 
 .cloud {
+
     position: absolute;
     bottom: 0;
     width: 100%;
     z-index: -3;
-}
 
-h2 {
-    color: var(--textColor);
-    font-size: 35px;
 }
 
 .star-1 {
+
     position: absolute;
     top: 5%;
     left: 7%;
+
 }
 
 .star-2 {
+
     position: absolute;
     top: 65%;
     left: 70%;
     height: 25%;
+    opacity: 0.7;
+
 }
 
 .star-3 {
@@ -144,20 +166,23 @@ h2 {
     top: 5%;
     left: 73%;
     height: 25%;
+    opacity: 0.7;
     transform: rotate(90deg);
 
 }
 
 
 @media (max-width: 890px) {
+
     .star-1 {
         display: none;
     }
+
 }
 
 @media (max-width: 750px) {
 
-    form{
+    form {
         margin-top: 70px;
     }
 
