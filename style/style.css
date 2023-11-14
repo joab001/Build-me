@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 * {
-    
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,6 +20,9 @@
     --textColor: #DDDADA;
     --bgButton: #AF88B8;
 
+    --sliderBg: #3F164B;
+    --poiterSlider: #551E65;
+
     font-size: 62.5%;
 
 }
@@ -33,8 +36,15 @@ body {
 
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
 
+}
+
+.white-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 h2 {
@@ -42,6 +52,40 @@ h2 {
     color: var(--textColor);
     font-size: 3.5rem;
     opacity: 0.9;
+
+}
+
+.slider {
+    height: 2.5rem;
+    width: 12.3rem;
+    border-radius: 25px;
+    background-color: black;
+
+    cursor: pointer;
+}
+
+.poiter {
+
+    height: 85%;
+    width: 6rem;
+
+
+    border-radius: 2.5rem;
+    background-color: wheat;
+    display: flex;
+
+    transform: translate(0.2rem, 0.25rem);
+}
+
+.active {
+
+    transform: translate(6.1rem, .25rem);
+
+}
+
+.slider-container {
+
+    display: flex;
 
 }
 
@@ -133,6 +177,42 @@ button:hover {
 
 }
 
+p {
+    color: var(--textColor);
+    font-size: 1.2rem;
+}
+
+.column p {
+    padding-left: 1.5rem;
+}
+
+p a {
+    color: var(--bgInput);
+    text-decoration: none;
+}
+
+.moon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 215px;
+}
+
+.ondaa {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 300px;
+}
+
+.rocket {
+    position: absolute;
+    left: 0;
+    top: 210px;
+    height: 450px;
+
+}
+
 .cloud {
 
     position: absolute;
@@ -171,6 +251,42 @@ button:hover {
 
 }
 
+.star-4 {
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    height: 30%;
+    transform: rotate(228deg);
+}
+
+.star-5 {
+    position: absolute;
+    top: 1.8%;
+    right: 20%;
+    height: 20%;
+    transform: rotate(121deg);
+    opacity: 0.7;
+}
+
+.star-6 {
+    position: absolute;
+    bottom: 43.8%;
+    left: 4%;
+    height: 19%;
+    transform: rotate(96deg);
+}
+
+.star-7 {
+    position: absolute;
+    top: -3%;
+    left: 8%;
+    height: 31%;
+    transform: rotate(222deg);
+}
+
+.none {
+    display: none;
+}
 
 @media (max-width: 890px) {
 
