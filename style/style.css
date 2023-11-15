@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
+
+@font-face {
+    font-family: 'basetica-bold';
+    src: url(../fonts/basetica-bold-maisfontes.b690/),
+        format('otf')
+}
+
 * {
 
     margin: 0;
@@ -10,7 +17,7 @@
     -moz-osx-font-smoothing: grayscale;
 
     font-family: 'Poppins', sans-serif;
-
+    /* font-family:'basetica-bold' ; */
 }
 
 :root {
@@ -43,10 +50,11 @@ body {
 
 .white-logo {
     position: absolute;
-    top: 10px;
-    left: 60px;
+    top: 3.5%;
+    left: 10%;
     height: 70px;
     cursor: pointer;
+    z-index: 10;
 }
 
 h2 {
@@ -54,6 +62,8 @@ h2 {
     color: var(--textColor);
     font-size: 3.5rem;
     opacity: 0.9;
+    margin-bottom: 5px;
+    font-size: 4rem;
 
 }
 
@@ -66,12 +76,12 @@ h2 {
     z-index: 1;
 
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .slider {
     height: 2.5rem;
-    width: 12.3rem;
+    width: 13.3rem;
     border-radius: 25px;
     background-color: var(--sliderBg);
 
@@ -84,7 +94,7 @@ h2 {
 .poiter {
 
     height: 85%;
-    width: 5rem;
+    width: 5.5rem;
 
 
     border-radius: 2.5rem;
@@ -96,8 +106,17 @@ h2 {
 
 .active {
 
-    transform: translate(6.1rem, .25rem);
+    width: 7.3rem;
+    transform: translate(5.7rem, 0.25rem);
 
+}
+
+.special p {
+    opacity: 0.6;
+}
+
+.special .selected {
+    opacity: 1;
 }
 
 .slider-container {
@@ -124,6 +143,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
 .container {
@@ -138,7 +158,7 @@ form {
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 18px;
 
 }
 
@@ -162,7 +182,7 @@ input {
     background-color: var(--bgInput);
     color: var(--textColor);
 
-    height: 35px;
+    height: 38px;
     width: 280px;
 
     padding-left: 15px;
@@ -185,8 +205,8 @@ input:focus {
 
 button {
 
-    padding: 5px 15px;
     border: none;
+    padding: 5px 25px;
     border-radius: 25px;
     font-weight: 700;
     background-color: var(--bgButton);
@@ -203,6 +223,7 @@ button:hover {
 p {
     color: var(--textColor);
     font-size: 1.2rem;
+    font-style: italic;
 }
 
 .column p {
@@ -237,8 +258,9 @@ p {
 .rocket {
     position: absolute;
     left: 0;
-    top: 210px;
+    bottom: 0%;
     height: 450px;
+    z-index: -1;
 
 }
 
@@ -257,6 +279,7 @@ p {
     position: absolute;
     top: 5%;
     left: 7%;
+    transform: rotate(57deg);
 
 }
 
@@ -295,7 +318,7 @@ p {
     right: 20%;
     height: 20%;
     transform: rotate(121deg);
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .star-6 {
@@ -306,13 +329,24 @@ p {
     transform: rotate(96deg);
 }
 
+
 .star-7 {
     position: absolute;
-    top: -3%;
-    left: 8%;
-    height: 31%;
+    bottom: 9%;
+    left: 25%;
+    height: 20%;
+    transform: rotate(112deg);
+    opacity: 0.6;
+}
+
+.star-8 {
+    position: absolute;
+    bottom: 24%;
+    right: 7%;
+    height: 20%;
     transform: rotate(222deg);
 }
+
 
 .none {
     display: none;
@@ -320,9 +354,12 @@ p {
 
 @media (max-width: 890px) {
 
-    .star-1 {
-        display: none;
-    }
+    .star-1 {display: none;}
+    .rocket{display: none;}
+    .ondaa{display: none;}
+    .star-6{display: none;}
+    .star-5{display: none;}
+    .star-4{display: none;}
 
 }
 

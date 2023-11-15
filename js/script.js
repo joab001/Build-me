@@ -7,6 +7,9 @@ const registrationWindow = document.querySelector('.registration-window');
 const loginWindow = document.querySelector('.login-window');
 const createAccount = document.querySelector('.new-account');
 
+const optionStudents = document.querySelector('.option-students');              
+const optionCompanies = document.querySelector('.option-companies');
+
 const logo = document.querySelector('.white-logo');
 
 
@@ -16,6 +19,9 @@ slider.addEventListener('click',()=>{
     poiter.classList.toggle('active');
     formUsres.classList.toggle('none');
     formCompanies.classList.toggle('none');
+
+    optionCompanies.classList.toggle('selected');
+    optionStudents.classList.toggle('selected');
 });
 
 createAccount.addEventListener('click',()=>{
