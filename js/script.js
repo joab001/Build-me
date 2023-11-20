@@ -13,7 +13,9 @@ const optionCompanies = document.querySelector('.option-companies');
 const logo = document.querySelector('.white-logo');
 
 
-logo.addEventListener('click',()=>{});
+logo.addEventListener('click',()=>{
+    window.location.reload();
+});
 
 slider.addEventListener('click',()=>{
     poiter.classList.toggle('active');

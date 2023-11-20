@@ -85,6 +85,8 @@ h2 {
     border-radius: 25px;
     background-color: var(--sliderBg);
 
+    display: flex;
+
     cursor: pointer;
     position: relative;
 
@@ -94,20 +96,46 @@ h2 {
 .poiter {
 
     height: 85%;
-    width: 5.5rem;
-
 
     border-radius: 2.5rem;
     background-color: var(--poiterSlider);
 
+    box-shadow: inset 0px 0px 1px #000000c9;
 
-    transform: translate(0.2rem, 0.25rem);
+    animation: slideoff 1s cubic-bezier(0.75, 0.01, 0.72, 1) forwards;
 }
 
 .active {
 
-    width: 7.3rem;
-    transform: translate(5.7rem, 0.25rem);
+    animation: slide 1s cubic-bezier(0.75, 0.01, 0.72, 1) forwards;
+
+}
+
+@keyframes slide {
+
+    from {
+        width: 5.5rem;
+        transform: translate(0.2rem, 0);
+    }
+
+    to {
+        width: 7rem;
+        transform: translate(6.1rem, 0);
+    }
+
+}
+
+@keyframes slideoff {
+
+    from {
+        width: 7rem;
+        transform: translate(6.1rem, 0rem);
+    }
+
+    to {
+        width: 5.5rem;
+        transform: translate(0.2rem, 0rem);
+    }
 
 }
 
@@ -132,9 +160,9 @@ form {
     margin-bottom: 70px;
 
     display: flex;
-    justify-content: center;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
     gap: 25px;
 
 }
@@ -280,6 +308,7 @@ p {
     top: 5%;
     left: 7%;
     transform: rotate(57deg);
+    z-index: -1;
 
 }
 
@@ -287,9 +316,10 @@ p {
 
     position: absolute;
     top: 65%;
-    left: 70%;
+    right: 0;
     height: 25%;
     opacity: 0.7;
+    z-index: -1;
 
 }
 
@@ -297,10 +327,11 @@ p {
 
     position: absolute;
     top: 5%;
-    left: 73%;
+    right: 0;
     height: 25%;
     opacity: 0.7;
     transform: rotate(90deg);
+    z-index: -1;
 
 }
 
@@ -310,6 +341,7 @@ p {
     left: 10%;
     height: 30%;
     transform: rotate(228deg);
+    z-index: -1;
 }
 
 .star-5 {
@@ -319,6 +351,7 @@ p {
     height: 20%;
     transform: rotate(121deg);
     opacity: 0.5;
+    z-index: -1;
 }
 
 .star-6 {
@@ -327,6 +360,7 @@ p {
     left: 4%;
     height: 19%;
     transform: rotate(96deg);
+    z-index: -1;
 }
 
 
@@ -337,6 +371,7 @@ p {
     height: 20%;
     transform: rotate(112deg);
     opacity: 0.6;
+    z-index: -1;
 }
 
 .star-8 {
@@ -345,6 +380,7 @@ p {
     right: 7%;
     height: 20%;
     transform: rotate(222deg);
+    z-index: -1;
 }
 
 
@@ -354,19 +390,23 @@ p {
 
 @media (max-width: 890px) {
 
-    .star-1 {display: none;}
-    .rocket{display: none;}
-    .ondaa{display: none;}
-    .star-6{display: none;}
-    .star-5{display: none;}
-    .star-4{display: none;}
+    .ondaa,
+    .rocket,
+    .star-1,
+    .star-4,
+    .star-5,
+    .star-6 {
+        display: none;
+    }
 
 }
+/* ainda é necessário fazer ajustes para a responsividade em aparelhos móveis */
 
 @media (max-width: 750px) {
 
     form {
-        margin-top: 70px;
+        margin: 0;
+        padding: 0;
     }
 
     .column-wrapper {
